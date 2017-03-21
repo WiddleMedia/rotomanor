@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Items</name>
+    <events>
+        <variable constant="0" name="HasCompass" sid="859686155924312" static="0" type="number">0</variable>
+        <event-group description="" sid="268733371432013" title="Compass2">
+            <sub-events>
+                <event-block sid="131844103525499">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="134015591159223" type="Player">
+                            <param id="0" name="Object">compass_pickup</param>
+                        </condition>
+                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="416889965765747" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="869364259597056">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="832697620041159" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="755084457499510" type="Keyboard">
+                                    <param id="0" name="Key">88 (X)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="853751061956750" type="compass_pickup" />
+                                <action id="-9" name="Set value" sid="306971035339843" type="System">
+                                    <param id="0" name="Variable">HasCompass</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="922374578724281" type="compass">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="678322871832251" title="Lantern" />
+        <event-group description="" sid="124118466460063" title="FrogLegCharm" />
+        <event-group description="" sid="480136795252514" title="Blunderbuss" />
+        <event-group description="" sid="310529115599237" title="Boots" />
+        <event-group description="" sid="642580204074037" title="Gyroscope" />
+    </events>
+</c2eventsheet>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Gravity</name>
+    <events>
+        <variable constant="0" name="Turns" sid="563915080089199" static="0" type="number">0</variable>
+        <variable constant="0" name="TurningCounterClockwise" sid="607423019197464" static="0" type="number">0</variable>
+        <variable constant="0" name="Counter" sid="435069927980432" static="0" type="number">0</variable>
+        <variable constant="0" name="TurningClockwise" sid="194852269401439" static="0" type="number">0</variable>
+        <variable constant="0" name="GlobalAngle" sid="409198281139947" static="0" type="number">0</variable>
+        <variable constant="0" name="GlobalGravity" sid="486196065823004" static="0" type="number">90</variable>
+        <event-group description="" sid="748818758853361" title="Rotating Functions">
+            <sub-events>
+                <event-block sid="330282916178471">
+                    <conditions>
+                        <condition id="0" name="On function" sid="687333467424362" type="Function">
+                            <param id="0" name="Name">&quot;RotateClockwise&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="851448862304668" type="System">
+                            <param id="0" name="Variable">TurningClockwise</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="838051512108302" type="System">
+                            <param id="0" name="Variable">Turns</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="734990412228270">
+                    <conditions>
+                        <condition id="0" name="On function" sid="978791071342838" type="Function">
+                            <param id="0" name="Name">&quot;RotateCounterClockwise&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="951770108829030" type="System">
+                            <param id="0" name="Variable">TurningCounterClockwise</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="513612101695525" type="System">
+                            <param id="0" name="Variable">Turns</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="633658336918597">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="842391591413327" type="System">
+                            <param id="0" name="Variable">TurningCounterClockwise</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="219034448123389" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="468536362488174">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="807523934489460" type="System">
+                                    <param id="0" name="Variable">GlobalAngle</param>
+                                    <param id="1" name="Value">GlobalAngle+2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="158051176230180" type="System">
+                                    <param id="0" name="Variable">GlobalGravity</param>
+                                    <param id="1" name="Value">GlobalAngle+90</param>
+                                </action>
+                                <action id="-22" name="Set layout angle" sid="896533454164907" type="System">
+                                    <param id="0" name="Angle">GlobalAngle&#x0D;&#x0A;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="422964295682669" type="System">
+                                    <param id="0" name="Variable">Counter</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="442523189717218">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="565589809298997" type="System">
+                            <param id="0" name="Variable">TurningClockwise</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="616666776919666" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="372209771080805">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="139822144656266" type="System">
+                                    <param id="0" name="Variable">GlobalAngle</param>
+                                    <param id="1" name="Value">GlobalAngle-2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="774760620253209" type="System">
+                                    <param id="0" name="Variable">GlobalGravity</param>
+                                    <param id="1" name="Value">GlobalAngle+90</param>
+                                </action>
+                                <action id="-22" name="Set layout angle" sid="455332959547444" type="System">
+                                    <param id="0" name="Angle">GlobalAngle&#x0D;&#x0A;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="786412513885753" type="System">
+                                    <param id="0" name="Variable">Counter</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="140143647110074">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="862232780235105" type="System">
+                            <param id="0" name="Variable">TurningClockwise</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="956345191976368" type="System">
+                            <param id="0" name="Variable">TurningCounterClockwise</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="759185463660231">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="841894293577822" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="PlatformPlus" id="10" name="Set angle of gravity" sid="370540648904037" type="Player">
+                                    <param id="0" name="Angle">GlobalGravity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="151883365959085" type="Player">
+                                    <param id="0" name="Angle">GlobalAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="888297191285359" type="gyro_box">
+                                    <param id="0" name="Angle">GlobalAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="661628392353247" type="gyro_backing">
+                                    <param id="0" name="Angle">GlobalAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="522183652964749">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="673525750753002" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="PlatformPlus" id="11" name="Set enabled" sid="476579178352587" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action disabled="1" id="-13" name="Set boolean" sid="439951925567985" type="Player">
+                                    <param id="0" name="Instance variable">allow_animations</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="415173430418758">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="822039805663300" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="835689960399463" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="PlatformPlus" id="11" name="Set enabled" sid="742835228663823" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="616178080154716">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="734654941426148" type="System">
+                            <param id="0" name="Variable">Counter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="472896749303818" type="System">
+                            <param id="0" name="Variable">TurningClockwise</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="680736404908240" type="System">
+                            <param id="0" name="Variable">TurningCounterClockwise</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="574287550904140" type="System">
+                            <param id="0" name="Variable">Counter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-13" name="Set boolean" sid="148516929077690" type="Player">
+                            <param id="0" name="Instance variable">allow_animations</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="900428730682206" type="Player">
+                            <param id="0" name="Angle">GlobalAngle</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="440933236757273" type="gyro_box">
+                            <param id="0" name="Angle">GlobalAngle</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="334395048362638" type="gyro_backing">
+                            <param id="0" name="Angle">GlobalAngle</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="171668666515146" title="Rotating Things" />
+    </events>
+</c2eventsheet>

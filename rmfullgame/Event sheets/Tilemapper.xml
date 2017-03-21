@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tilemapper</name>
+    <events>
+        <event-block sid="523108150492749">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="850581974833314" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="tileset_select" sid="638477938240775" static="0" type="number">0</variable>
+                <variable constant="0" name="tileset" sid="912748344558895" static="0" type="number">0</variable>
+                <event-block sid="467917103466165">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="158275360263691">
+                    <conditions>
+                        <condition id="-10" name="For" sid="528849619188719" type="System">
+                            <param id="0" name="Name">&quot;Y Tile&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">tilemap.Height/16</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="bitwise" sid="112246359170638" static="0" type="number">0</variable>
+                        <event-block sid="964977543595437">
+                            <conditions>
+                                <condition id="-10" name="For" sid="151978310441459" type="System">
+                                    <param id="0" name="Name">&quot;X Tile&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">tilemap.Width/16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="595622344847524" type="System">
+                                    <param id="0" name="Variable">bitwise</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="231786200462274">
+                                    <conditions>
+                                        <condition id="0" name="Compare tile at" sid="883071590000697" type="Tilemap">
+                                            <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                            <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                            <param id="2" name="Comparison">5</param>
+                                            <param id="3" name="Tile">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="958942225905988">
+                                            <conditions>
+                                                <condition id="0" name="Compare tile at" sid="304055409343157" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)+1</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Comparison">5</param>
+                                                    <param id="3" name="Tile">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="248953924538726" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="512675979612519">
+                                            <conditions>
+                                                <condition id="0" name="Compare tile at" sid="931569226491328" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)+1</param>
+                                                    <param id="2" name="Comparison">5</param>
+                                                    <param id="3" name="Tile">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="342352549414095" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="933951752858237">
+                                            <conditions>
+                                                <condition id="0" name="Compare tile at" sid="385378339526465" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)-1</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Comparison">5</param>
+                                                    <param id="3" name="Tile">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="825431721833725" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Value">4</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="164686284990005">
+                                            <conditions>
+                                                <condition id="0" name="Compare tile at" sid="421496962894349" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)-1</param>
+                                                    <param id="2" name="Comparison">5</param>
+                                                    <param id="3" name="Tile">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="590564862444353" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Value">8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="878193364819682">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="589285668178365" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="208863277621608" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">15</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="453916068257896">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="878374325620673" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="295879272124994" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">12</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="626049267370922">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="537337058278373" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="686699156034635" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">3</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="597348821620307">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="699823584777747" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="928615244926255" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">0</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="660196298258734">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="608181005279691" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="278859384323065" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">14</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="770215725746432">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="864395394043603" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="745841808123144" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">13</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="755467320468674">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="703954007105003" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="347425022876928" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">2</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="401468080731207">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="230669712471255" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">7</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="536964017605233" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">1</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="144628704023028">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="912223297508867" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">8</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="792237628478268" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">11</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="670411153317496">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="568557066632597" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">9</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="283288285861156" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">8</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="794567343357857">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="486511853189724" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="224016018240357" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">7</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="173577330547857">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="834750536063420" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">11</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="261462109319746" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">4</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="141783727946071">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="306251982973311" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="533945294600934" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">10</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="746033983714771">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="285112754408809" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">13</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="998483962350654" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">9</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="120662442559514">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="456445037354788" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">14</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="244863844539794" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">6</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="918291283342383">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="993342758481825" type="System">
+                                                    <param id="0" name="Variable">bitwise</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">15</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set tile" sid="320850817769854" type="Tilemap">
+                                                    <param id="0" name="Tile X">loopindex(&quot;X Tile&quot;)</param>
+                                                    <param id="1" name="Tile Y">loopindex(&quot;Y Tile&quot;)</param>
+                                                    <param id="2" name="Tile">5</param>
+                                                    <param id="3" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="seed" sid="148790690105567" static="0" type="number">0</variable>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

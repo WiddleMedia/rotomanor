@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">ProtoZone</layout>
+        <layout order="1">IntroTutorial</layout>
+        <layout order="5">World Hub</layout>
+        <layout order="6">Basement</layout>
+        <layout order="7">Grand Hall</layout>
+        <layout order="8">Attic</layout>
+        <layout order="9">Study</layout>
+        <layout order="10">Laboratory</layout>
+        <event-sheet order="2">EProtoZone</event-sheet>
+        <event-sheet order="3">IntroTutorial</event-sheet>
+        <event-sheet order="4">MiniMap</event-sheet>
+        <event-sheet order="11">Sanity</event-sheet>
+        <event-sheet order="12">Player</event-sheet>
+        <event-sheet active="1" order="13">Items</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Interactables" />
+        <family expanded="0" name="Decoration" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Generic/" />
+        <folder expanded="0" path="object-folder/Decoration/" />
+        <folder expanded="0" path="object-folder/Decoration/Generic/" />
+        <folder expanded="0" path="object-folder/Decoration/Basement/" />
+        <folder expanded="0" path="object-folder/Decoration/Kitchen/" />
+        <folder expanded="0" path="object-folder/Decoration/Attic/" />
+        <folder expanded="0" path="object-folder/Decoration/Grand Hall/" />
+        <folder expanded="0" path="object-folder/Decoration/Study/" />
+        <folder expanded="0" path="object-folder/Decoration/Laboratory/" />
+        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/Level Elements/" />
+        <folder expanded="0" path="object-folder/Items/" />
+        <folder expanded="0" path="object-folder/Items/Pickups/" />
+        <folder expanded="0" path="object-folder/Z- Misc/" />
+        <folder expanded="0" path="object-folder/Monsters/" />
+        <folder expanded="0" path="object-folder/Traps/" />
+        <folder expanded="0" path="object-folder/Bosses/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Universal Sheets/" />
+        <folder expanded="0" path="event-folder/Zones/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Bookcase/" />
+        <folder expanded="1" path="animation-folder/Chair/" />
+        <folder expanded="1" path="animation-folder/chandalier/" />
+        <folder expanded="1" path="animation-folder/Painting/" />
+        <folder expanded="1" path="animation-folder/stand/" />
+        <folder expanded="1" path="animation-folder/table/" />
+        <folder expanded="1" path="animation-folder/WineRack/" />
+        <folder expanded="1" path="animation-folder/Barrel/" />
+        <folder expanded="1" path="animation-folder/Cage/" />
+        <folder expanded="1" path="animation-folder/HangingChains/" />
+        <folder expanded="1" path="animation-folder/Cabinet/" />
+        <folder expanded="1" path="animation-folder/Shelving/" />
+        <folder expanded="1" path="animation-folder/Counters/" />
+        <folder expanded="1" path="animation-folder/Cookware/" />
+        <folder expanded="1" path="animation-folder/Chest/" />
+        <folder expanded="1" path="animation-folder/Crate/" />
+        <folder expanded="1" path="animation-folder/DiningTable/" />
+        <folder expanded="1" path="animation-folder/OrnateChandelier/" />
+        <folder expanded="1" path="animation-folder/FancyChair/" />
+        <folder expanded="1" path="animation-folder/Food/" />
+        <folder expanded="1" path="animation-folder/GrandWindows/" />
+        <folder expanded="1" path="animation-folder/EpicPainting/" />
+        <folder expanded="1" path="animation-folder/Armchair/" />
+        <folder expanded="1" path="animation-folder/BookStack/" />
+        <folder expanded="1" path="animation-folder/ExecutiveBallClacker/" />
+        <folder expanded="1" path="animation-folder/Machinery/" />
+        <folder expanded="1" path="animation-folder/Gear/" />
+        <folder expanded="1" path="animation-folder/Cog/" />
+        <folder expanded="1" path="animation-folder/Piston/" />
+        <folder expanded="1" path="animation-folder/Vat/" />
+        <folder expanded="1" path="animation-folder/Boiler/" />
+        <folder expanded="1" path="animation-folder/CopperPipe/" />
+        <folder expanded="1" path="animation-folder/Glassware/" />
+        <folder expanded="1" path="animation-folder/button_prompt/" />
+        <folder expanded="1" path="animation-folder/compass/" />
+        <folder expanded="1" path="animation-folder/switch/" />
+        <folder expanded="1" path="animation-folder/ladder/" />
+        <folder expanded="1" path="animation-folder/gyro_box/" />
+        <folder expanded="1" path="animation-folder/gyro_backing/" />
+        <folder expanded="1" path="animation-folder/StompBlock/" />
+        <folder expanded="1" path="animation-folder/GravityBlock/" />
+        <folder expanded="1" path="animation-folder/Fan/" />
+        <folder expanded="1" path="animation-folder/compass_pickup/" />
+        <folder expanded="1" path="animation-folder/Lantern/" />
+        <folder expanded="1" path="animation-folder/FrogLegCharm/" />
+        <folder expanded="1" path="animation-folder/Blunderbuss/" />
+        <folder expanded="1" path="animation-folder/Boots/" />
+        <folder expanded="1" path="animation-folder/Gyroscope/" />
+        <folder expanded="1" path="animation-folder/note/" />
+        <folder expanded="1" path="animation-folder/zordered/" />
+        <folder expanded="1" path="animation-folder/Spider/" />
+        <folder expanded="1" path="animation-folder/Bat/" />
+        <folder expanded="1" path="animation-folder/HauntedBook/" />
+        <folder expanded="1" path="animation-folder/HauntedCandelabra/" />
+        <folder expanded="1" path="animation-folder/SoupGhoul/" />
+        <folder expanded="1" path="animation-folder/HauntedArmor/" />
+        <folder expanded="1" path="animation-folder/GhostlyGuest/" />
+        <folder expanded="1" path="animation-folder/Spikes/" />
+        <folder expanded="1" path="animation-folder/HotOven/" />
+        <folder expanded="1" path="animation-folder/SlidingSmashers/" />
+        <folder expanded="1" path="animation-folder/GhoulKing/" />
+        <folder expanded="1" path="animation-folder/BasementDweller/" />
+        <folder expanded="1" path="animation-folder/CaptainOfTheGuard/" />
+        <folder expanded="1" path="animation-folder/Repairbot/" />
+        <folder expanded="1" path="animation-folder/TheOwner/" />
+        <folder expanded="1" path="animation-folder/Final/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntroTutorial</name>
+    <events>
+        <include>MiniMap</include>
+        <include>Z-Order Script</include>
+        <include>Tilemapper</include>
+        <include>Player</include>
+        <include>Notes</include>
+        <include>Level Setup</include>
+        <include>Items</include>
+        <include>Interactables</include>
+        <include>Gravity</include>
+        <include>Decorations</include>
+        <include>Debug</include>
+        <include>Constants</include>
+    </events>
+</c2eventsheet>

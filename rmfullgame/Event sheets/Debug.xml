@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Debug</name>
+    <events>
+        <event-group description="" sid="113083889936015" title="Debug">
+            <sub-events>
+                <event-block sid="801046949955028">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="853522202824231" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="244919972126966" type="Function">
+                            <param id="0" name="Name">&quot;RotateClockwise&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735252537501320">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="523948243452491" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="637965179551195" type="Function">
+                            <param id="0" name="Name">&quot;RotateCounterClockwise&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="130724687557480">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="190420433380443" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="PlatformPlus" id="13" name="Set double jump" sid="677972933340422" type="Player">
+                    <param id="0" name="set Double jump">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164964141535392">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="739440679363466" type="Keyboard">
+                    <param id="0" name="Key">50 (2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="PlatformPlus" id="14" name="Set Wall Jump" sid="303146281052301" type="Player">
+                    <param id="0" name="set Wall jump">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

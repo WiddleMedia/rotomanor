@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Interactables</name>
+    <events>
+        <variable constant="0" name="notes_read" sid="198683819158847" static="0" type="number">0</variable>
+        <include>Gravity</include>
+        <event-block sid="248882697447997">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="413377399535230" type="switch">
+                    <param id="0" name="Instance variable">flipped</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="194255421667656" type="switch">
+                    <param id="0" name="Animation">&quot;rotate_clockwise&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975704437454798">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="358836897709509" type="switch">
+                    <param id="0" name="Instance variable">flipped</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="810867368514070" type="switch">
+                    <param id="0" name="Animation">&quot;rotate_counter_clockwise&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="694012218168849">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="823658053735721" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="575413729412937" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="134851932046029">
+                    <conditions>
+                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="462535496939130" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Switch</comment>
+                        <event-block sid="109160500360193">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="891121779804970" type="Player">
+                                    <param id="0" name="Object">switch</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="846171773568012">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="818042823508465" type="switch">
+                                            <param id="0" name="Instance variable">flipped</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="136299279255783" type="switch">
+                                            <param id="0" name="Instance variable">flipped</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="538104059662585" type="Function">
+                                            <param id="0" name="Name">&quot;RotateClockwise&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="734576496061581">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="202963993731024" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="849637726357389" type="switch">
+                                            <param id="0" name="Instance variable">flipped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="386394749490349" type="Function">
+                                            <param id="0" name="Name">&quot;RotateCounterClockwise&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Notes</comment>
+                        <event-block sid="637311880785505">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="212073156515663" type="Player">
+                                    <param id="0" name="Object">note</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="672601258823540">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="716132038633152" type="System">
+                                            <param id="0" name="Variable">notes_read</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="504024133722107" type="Function">
+                                            <param id="0" name="Name">&quot;ReadNote&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="835013730248457">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="724010169548909" type="note">
+                                            <param id="0" name="Animation">&quot;unread&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="331968113877545" type="note">
+                                            <param id="0" name="Animation">&quot;read&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="775832164116741">
+            <conditions>
+                <condition id="0" name="On function" sid="513124382895310" type="Function">
+                    <param id="0" name="Name">&quot;ReadNote&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="657317371575341">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="726794138655713" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="271839185098090">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="185722770271264" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

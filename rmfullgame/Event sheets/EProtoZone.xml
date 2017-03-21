@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EProtoZone</name>
+    <events>
+        <include>MiniMap</include>
+        <variable constant="0" name="filename" sid="997363843517420" static="0" type="text">map</variable>
+        <include>Debug</include>
+        <include>Notes</include>
+        <include>Constants</include>
+        <include>Decorations</include>
+        <include>Gravity</include>
+        <include>Level Setup</include>
+        <include>Interactables</include>
+        <include>Items</include>
+        <include>Player</include>
+        <include>Tilemapper</include>
+        <include>Z-Order Script</include>
+        <event-block sid="169486326636158">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="627291282553509" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Tilemap</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="386900017311161">
+                    <conditions>
+                        <condition id="0" name="Compare tile at" sid="129019019178618" type="Tilemap">
+                            <param id="0" name="Tile X">Tilemap.PositionToTileX(Mouse.X)</param>
+                            <param id="1" name="Tile Y">Tilemap.PositionToTileY(Mouse.Y)</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Tile">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Erase tile" sid="166338056036515" type="Tilemap">
+                            <param id="0" name="Tile X">Tilemap.PositionToTileX(Mouse.X)</param>
+                            <param id="1" name="Tile Y">Tilemap.PositionToTileY(Mouse.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274281040551958">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="992746432406711" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="955531066660388" type="Tilemap">
+                            <param id="0" name="Tile X">Tilemap.PositionToTileX(Mouse.X)</param>
+                            <param id="1" name="Tile Y">Tilemap.PositionToTileY(Mouse.Y)</param>
+                            <param id="2" name="Tile">5</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="351393255851336">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="310771373625392" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="522163982928191" type="System">
+                    <param id="0" name="Object to create">switch</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-8" name="Set angle" sid="372029696617560" type="switch">
+                    <param id="0" name="Angle">GlobalAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="254523238068469">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="112859073633172" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="583324064091069">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="976223974479812" type="tilemap_array">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="410566842863413" type="tilemap_array">
+                            <param id="0" name="X">tilemap_array.CurX</param>
+                            <param id="1" name="Y">tilemap_array.CurY</param>
+                            <param id="2" name="Value">Tilemap.TileAt(tilemap_array.CurX, tilemap_array.CurY)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="338907390547406">
+                    <conditions />
+                    <actions>
+                        <action id="12" name="Download" sid="197458442683066" type="tilemap_array">
+                            <param id="0" name="Filename">filename&amp;&quot;.json&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="286374189863197">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="587819607855845" type="Keyboard">
+                    <param id="0" name="Key">50 (2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="418347234805664" type="tilemap_array">
+                    <param id="0" name="JSON">filename&amp;&quot;.json&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="216837021505874">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="578910660555080" type="tilemap_array">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="698986157422057" type="Tilemap">
+                            <param id="0" name="Tile X">tilemap_array.CurX</param>
+                            <param id="1" name="Tile Y">tilemap_array.CurY</param>
+                            <param id="2" name="Tile">tilemap_array.CurValue</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="393558007245536">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="860131427390541" type="tilemap_array">
+                                    <param id="0" name="X">tilemap_array.CurX</param>
+                                    <param id="1" name="Y">tilemap_array.CurY</param>
+                                    <param id="2" name="Comparison">3</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Erase tile" sid="330830380446359" type="Tilemap">
+                                    <param id="0" name="Tile X">tilemap_array.CurX</param>
+                                    <param id="1" name="Tile Y">tilemap_array.CurY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="658227253005404">
+            <conditions>
+                <condition id="1" name="On text changed" sid="492989733263816" type="TextBox" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="194597466558116" type="System">
+                    <param id="0" name="Variable">filename</param>
+                    <param id="1" name="Value">TextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="500971811003652">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="368480408504199" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="459727618561146" type="Function">
+                    <param id="0" name="Name">&quot;RefreshMiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-15" name="Set visible" sid="586760676722457" type="mini_map">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="558515031502052">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="441121320662644" type="Mouse">
+                    <param id="0" name="Object">TextBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set visible" sid="836438673417497" type="TextBox">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="773533808997452">
+            <conditions>
+                <condition id="-22" name="Else" sid="449420609612841" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set visible" sid="270702571896154" type="TextBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

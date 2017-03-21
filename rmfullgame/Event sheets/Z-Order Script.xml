@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Z-Order Script</name>
+    <events>
+        <event-block sid="475707023266162">
+            <conditions>
+                <condition id="0" name="On function" sid="656466850178493" type="Function">
+                    <param id="0" name="Name">&quot;ZOrder&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="324471990716224">
+                    <conditions />
+                    <actions>
+                        <action id="-24" name="Move to top" sid="374553955944458" type="zordered" />
+                        <action id="-24" name="Move to top" sid="294531718248843" type="Player" />
+                        <action id="-29" name="Move to object" sid="337607857270057" type="gyro_box">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">Player</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="234540536750883" type="Tilemap">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Player</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="283934039034910" type="gyro_backing">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Player</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="418293289201250" type="button_prompt">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">Tilemap</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="114712907120926" type="Interactables">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Tilemap</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="985347990797071" type="Decoration">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">zordered</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

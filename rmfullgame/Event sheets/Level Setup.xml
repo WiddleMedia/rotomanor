@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level Setup</name>
+    <events>
+        <event-block sid="108631961639093">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="320405820653105" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set layout angle" sid="383808022598606" type="System">
+                    <param id="0" name="Angle">GlobalAngle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="204060148953745" type="Player">
+                    <param id="0" name="Angle">GlobalAngle</param>
+                </action>
+                <action behavior="PlatformPlus" id="10" name="Set angle of gravity" sid="254684200003382" type="Player">
+                    <param id="0" name="Angle">GlobalGravity</param>
+                </action>
+                <action id="-7" name="Set size" sid="427411928556943" type="TiledBackground">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="-34" name="Set layer background color" sid="139879488067974" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Z-Ordering</comment>
+                <event-block sid="715934454244972">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="852869879850344" type="Function">
+                            <param id="0" name="Name">&quot;ZOrder&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="802307151022924">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="458001236163396" type="System">
+                    <param id="0" name="Variable">HasCompass</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="656967526337660" type="compass">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
