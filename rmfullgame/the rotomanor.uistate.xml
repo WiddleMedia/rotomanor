@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">ProtoZone</layout>
-        <layout order="1">IntroTutorial</layout>
+        <layout active="1" order="1">IntroTutorial</layout>
         <layout order="5">World Hub</layout>
         <layout order="6">Basement</layout>
         <layout order="7">Grand Hall</layout>
@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="4">MiniMap</event-sheet>
         <event-sheet order="11">Sanity</event-sheet>
         <event-sheet order="12">Player</event-sheet>
-        <event-sheet active="1" order="13">Items</event-sheet>
+        <event-sheet order="13">Items</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -47,7 +47,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Decoration/Study/" />
         <folder expanded="0" path="object-folder/Decoration/Laboratory/" />
         <folder expanded="0" path="object-folder/UI/" />
-        <folder expanded="0" path="object-folder/Level Elements/" />
+        <folder expanded="1" path="object-folder/Level Elements/" />
         <folder expanded="0" path="object-folder/Items/" />
         <folder expanded="0" path="object-folder/Items/Pickups/" />
         <folder expanded="0" path="object-folder/Z- Misc/" />
